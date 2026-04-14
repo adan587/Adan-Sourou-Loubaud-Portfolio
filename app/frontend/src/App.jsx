@@ -1,6 +1,6 @@
 import React from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -18,7 +18,7 @@ import Contact from "./pages/Contact";
 function App() {
     return (
         <ThemeProvider>
-            <BrowserRouter>
+            <HashRouter>
                 <div className="App min-h-screen bg-background text-foreground">
                     <Header />
                     <main>
@@ -35,7 +35,8 @@ function App() {
                     <Footer />
                     <Toaster />
                 </div>
-            </BrowserRouter>
+            </HashRouter>
+
         </ThemeProvider>
     );
 }
