@@ -56,6 +56,19 @@ const Skills = () => {
                     </div>
                 </div>
 
+                {/* Level Legend */}
+                <div className="flex justify-center mb-10 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">
+                    <Card className="p-4 bg-background/50 border-emerald-500/20 max-w-2xl text-sm text-muted-foreground w-full shadow-sm">
+                        <h3 className="font-semibold text-foreground mb-2">Comprendre ma grille d'évaluation :</h3>
+                        <ul className="space-y-1 grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                            <li><strong className="text-emerald-500">0-40%</strong> : Notions basiques (concepts théoriques).</li>
+                            <li><strong className="text-cyan-500">40-60%</strong> : Pratique courante (laboratoire, maquettes expertes).</li>
+                            <li><strong className="text-violet-500">60-80%</strong> : Autonomie (administration, déploiements réels).</li>
+                            <li><strong className="text-rose-500">80-100%</strong> : Avancé / Pro (utilisation en entreprise).</li>
+                        </ul>
+                    </Card>
+                </div>
+
                 {/* Category Tabs */}
                 <div className="flex flex-wrap justify-center gap-3 mb-10">
                     {skills.map((category, index) => {

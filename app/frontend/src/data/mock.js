@@ -282,7 +282,16 @@ export const projects = [
                     ]
                 },
                 {
-                    title: "5. Maintenance et Documentation",
+                    title: "5. Environnement OpenShift (Red Hat)",
+                    subtitle: "Déploiement et administration d'architectures d'entreprise.",
+                    items: [
+                        "Installation : Déploiement d'un cluster OpenShift (version Single Node) à l'aide de l'outil Assisted Installer.",
+                        "Configuration réseau : Mise en place de règles de redirection DNS (via OPNsense) pour s'assurer que les domaines pointent correctement vers l'environnement OpenShift.",
+                        "Administration : Gestion des opérateurs (comme le Local Storage Operator) et déploiement d'applications certifiées pour OpenShift."
+                    ]
+                },
+                {
+                    title: "6. Maintenance et Documentation",
                     subtitle: "Prévention et résolution des problèmes.",
                     items: [
                         "Optimisation de la mémoire : Diagnostic et ajustement des paramètres pour éviter que le serveur principal (Proxmox) ne sature et ralentisse.",
