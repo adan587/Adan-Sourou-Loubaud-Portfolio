@@ -3,6 +3,7 @@ import { Shield, Network, Server, Box, Globe, Activity } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
+import { Progress } from '../components/ui/progress';
 import { skills } from '../data/mock';
 
 const iconMap = {
@@ -97,18 +98,21 @@ const Skills = () => {
                         </div>
 
                         {/* Skills Grid */}
-                        <div className="flex flex-wrap gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {activeCategory.items.map((skill, idx) => (
-                                <Badge
+                                <div
                                     key={idx}
-                                    variant="outline"
-                                    className={`px-4 py-2.5 text-sm font-medium bg-background/60 transition-all duration-200 cursor-default ${activeColor.badge}`}
+                                    className={`p-4 rounded-xl border bg-background/60 transition-all duration-200 ${activeColor.badge}`}
                                     style={{
                                         animation: `fadeInUp 0.3s ease-out ${idx * 0.04}s both`
                                     }}
                                 >
-                                    {skill}
-                                </Badge>
+                                    <div className="flex justify-between items-center mb-2">
+                                        <span className="font-medium text-sm text-foreground">{skill.name}</span>
+                                        <span className="text-xs font-semibold opacity-70">{skill.level}%</span>
+                                    </div>
+                                    <Progress value={skill.level} className="h-1.5" />
+                                </div>
                             ))}
                         </div>
                     </Card>

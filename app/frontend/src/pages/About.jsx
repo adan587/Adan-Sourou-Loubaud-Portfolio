@@ -22,7 +22,7 @@ const About = () => {
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <Card className="md:col-span-1 p-8 text-center  transition-shadow">
                         <div className="w-32 h-32 rounded-full mx-auto mb-6 border-4 dark:border-emerald-500/20 shadow-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
-                            <span className="text-2xl font-bold text-white">Adan</span>
+                            <span className="text-4xl font-bold text-white">ASL</span>
                         </div>
                         <h2 className="text-2xl font-bold mb-2">{personalInfo.name}</h2>
                         <p className="text-muted-foreground mb-4">{personalInfo.title}</p>

@@ -365,15 +365,15 @@ export const skills = [
         title: "Cybersécurité",
         icon: "Shield",
         items: [
-            "Chiffrement et authentification",
-            "Sécurisation des accès",
-            "Outils de découverte",
-            "VPN (WireGuard, OPNvpn)",
-            "VPN site-to-site",
-            "Machines virtuelles vulnérables (lab CTF)",
-            "Analyse réseau avancée",
-            "Hardening système",
-            "Gestion des certificats (PKI)"
+            { name: "Chiffrement et authentification", level: 60 },
+            { name: "Sécurisation des accès", level: 70 },
+            { name: "Outils de découverte", level: 50 },
+            { name: "VPN (WireGuard, OPNvpn)", level: 80 },
+            { name: "VPN site-to-site", level: 60 },
+            { name: "Machines virtuelles vulnérables (lab CTF)", level: 50 },
+            { name: "Analyse réseau avancée", level: 45 },
+            { name: "Hardening système", level: 75 },
+            { name: "Gestion des certificats (PKI)", level: 55 }
         ]
     },
     {
@@ -381,16 +381,16 @@ export const skills = [
         title: "Réseaux & Sécurité",
         icon: "Network",
         items: [
-            "Modèle OSI / TCP-IP",
-            "DHCP statique / DNS",
-            "HTTP / HTTPS / SSH",
-            "Pare-feu OPNsense",
-            "Segmentation réseau (VLANs)",
-            "NAT & Filtrage DNS (AdGuard)",
-            "CoreDNS",
-            "Cisco Packet Tracer",
-            "Routage inter-VLAN",
-            "Architecture LAN / WAN"
+            { name: "Modèle OSI / TCP-IP", level: 80 },
+            { name: "DHCP statique / DNS", level: 85 },
+            { name: "HTTP / HTTPS / SSH", level: 85 },
+            { name: "Pare-feu OPNsense", level: 80 },
+            { name: "Segmentation réseau (VLANs)", level: 75 },
+            { name: "NAT & Filtrage DNS (AdGuard)", level: 70 },
+            { name: "CoreDNS", level: 60 },
+            { name: "Cisco Packet Tracer", level: 65 },
+            { name: "Routage inter-VLAN", level: 75 },
+            { name: "Architecture LAN / WAN", level: 60 }
         ]
     },
     {
@@ -398,17 +398,17 @@ export const skills = [
         title: "Virtualisation & Infrastructure",
         icon: "Server",
         items: [
-            "Administration Proxmox VE",
-            "Kubernetes (K8s)",
-            "Talos Linux",
-            "Conteneurs LXC",
-            "Machines Virtuelles (VM)",
-            "Linux (Debian, Ubuntu)",
-            "Windows Server (AD DS, DNS)",
-            "Active Directory (GPO, OU)",
-            "Gestion utilisateurs et droits",
-            "VMware Workstation",
-            "Stockage & Snapshots"
+            { name: "Administration Proxmox VE", level: 85 },
+            { name: "Kubernetes (K8s)", level: 70 },
+            { name: "Talos Linux", level: 75 },
+            { name: "Conteneurs LXC", level: 80 },
+            { name: "Machines Virtuelles (VM)", level: 85 },
+            { name: "Linux (Debian, Ubuntu)", level: 85 },
+            { name: "Windows Server (AD DS, DNS)", level: 70 },
+            { name: "Active Directory (GPO, OU)", level: 65 },
+            { name: "Gestion utilisateurs et droits", level: 75 },
+            { name: "VMware Workstation", level: 80 },
+            { name: "Stockage & Snapshots", level: 80 }
         ]
     },
     {
@@ -416,19 +416,19 @@ export const skills = [
         title: "DevOps & CI/CD",
         icon: "Container",
         items: [
-            "Écosystème Docker",
-            "Docker-in-Docker (DinD)",
-            "Portainer",
-            "Docker Compose (YAML)",
-            "Déploiement de Stacks",
-            "GitLab CI/CD",
-            "ArgoCD (GitOps)",
-            "Helm Charts",
-            "Ansible",
-            "Terraform",
-            "Git & Gitea",
-            "Harbor (Registry Docker)",
-            "YAML / JSON"
+            { name: "Écosystème Docker", level: 80 },
+            { name: "Docker-in-Docker (DinD)", level: 65 },
+            { name: "Portainer", level: 75 },
+            { name: "Docker Compose (YAML)", level: 80 },
+            { name: "Déploiement de Stacks", level: 75 },
+            { name: "GitLab CI/CD", level: 70 },
+            { name: "ArgoCD (GitOps)", level: 60 },
+            { name: "Helm Charts", level: 55 },
+            { name: "Ansible", level: 65 },
+            { name: "Terraform", level: 50 },
+            { name: "Git & Gitea", level: 70 },
+            { name: "Harbor (Registry Docker)", level: 60 },
+            { name: "YAML / JSON", level: 85 }
         ]
     },
     {
@@ -436,14 +436,14 @@ export const skills = [
         title: "Services Web & Accès",
         icon: "Globe",
         items: [
-            "Reverse Proxy (Nginx Proxy Manager)",
-            "Traefik (Ingress Kubernetes)",
-            "Certificats SSL/TLS (Let's Encrypt)",
-            "Exposition sécurisée de services",
-            "Webhooks (déploiement auto)",
-            "Dashy (Dashboard unifié)",
-            "Homepage",
-            "Configuration DNS locale"
+            { name: "Reverse Proxy (Nginx Proxy Manager)", level: 80 },
+            { name: "Traefik (Ingress Kubernetes)", level: 65 },
+            { name: "Certificats SSL/TLS (Let's Encrypt)", level: 70 },
+            { name: "Exposition sécurisée de services", level: 75 },
+            { name: "Webhooks (déploiement auto)", level: 60 },
+            { name: "Dashy (Dashboard unifié)", level: 80 },
+            { name: "Homepage", level: 70 },
+            { name: "Configuration DNS locale", level: 75 }
         ]
     },
     {
@@ -451,14 +451,14 @@ export const skills = [
         title: "Monitoring & Troubleshooting",
         icon: "Activity",
         items: [
-            "Uptime Kuma (Surveillance)",
-            "Tableaux de bord unifiés",
-            "Analyse de logs",
-            "Débogage de conteneurs",
-            "Résolution d'incidents CLI",
-            "Shell scripting (Bash/PowerShell)",
-            "Wireshark",
-            "Documentation technique"
+            { name: "Uptime Kuma (Surveillance)", level: 85 },
+            { name: "Tableaux de bord unifiés", level: 70 },
+            { name: "Analyse de logs", level: 65 },
+            { name: "Débogage de conteneurs", level: 70 },
+            { name: "Résolution d'incidents CLI", level: 60 },
+            { name: "Shell scripting (Bash/PowerShell)", level: 65 },
+            { name: "Wireshark", level: 50 },
+            { name: "Documentation technique", level: 75 }
         ]
     }
 ];
