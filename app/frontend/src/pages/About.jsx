@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, Plane, Music, Dumbbell } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { personalInfo, education, certifications } from '../data/mock';
@@ -130,29 +130,31 @@ const About = () => {
 
                 {/* Interests Section */}
                 <div className="mt-16">
-                    <Card className="p-8 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10 border-2 dark:border-emerald-500/20">
-                        <h2 className="text-2xl font-bold mb-6">Centres d'intérêt</h2>
-                        <div className="flex flex-wrap gap-3">
-                            {[
-                                'Proxmox',
-                                'Kubernetes',
-                                'GitLab CI/CD',
-                                'ArgoCD & GitOps',
-                                'Docker',
-                                'Terraform',
-                                'DevOps',
-                                'OpenShift'
-                            ].map((interest, index) => (
-                                <Badge
-                                    key={index}
-                                    variant="outline"
-                                    className="px-4 py-2 text-sm hover:bg-emerald-500/10 hover:border-emerald-500 hover:scale-105 transition-all cursor-pointer"
-                                >
-                                    {interest}
-                                </Badge>
-                            ))}
-                        </div>
-                    </Card>
+                    <h2 className="text-3xl font-bold mb-8 flex items-center justify-center">
+                        Centres d'intérêt
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <Card className="p-8 flex flex-col items-center justify-center text-center hover:scale-105 transition-all duration-300 border-2 hover:dark:border-emerald-500/50 group cursor-pointer">
+                            <div className="mb-4 p-4 rounded-full bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors">
+                                <Plane className="h-8 w-8 text-emerald-500" />
+                            </div>
+                            <h3 className="text-xl font-bold">Voyages</h3>
+                        </Card>
+                        
+                        <Card className="p-8 flex flex-col items-center justify-center text-center hover:scale-105 transition-all duration-300 border-2 hover:dark:border-cyan-500/50 group cursor-pointer">
+                            <div className="mb-4 p-4 rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
+                                <Music className="h-8 w-8 text-cyan-500" />
+                            </div>
+                            <h3 className="text-xl font-bold">Piano</h3>
+                        </Card>
+                        
+                        <Card className="p-8 flex flex-col items-center justify-center text-center hover:scale-105 transition-all duration-300 border-2 hover:dark:border-violet-500/50 group cursor-pointer">
+                            <div className="mb-4 p-4 rounded-full bg-violet-500/10 group-hover:bg-violet-500/20 transition-colors">
+                                <Dumbbell className="h-8 w-8 text-violet-500" />
+                            </div>
+                            <h3 className="text-xl font-bold">Musculation</h3>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </div>

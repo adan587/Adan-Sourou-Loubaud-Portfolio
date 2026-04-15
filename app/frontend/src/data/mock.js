@@ -23,7 +23,7 @@ export const projects = [
         technologies: ["OPNsense", "DHCP", "Firewall Rules", "OPNvpn", "LAN/WAN"],
         section: "scolaire",
         category: "Réseau",
-        difficulty: "Intermédiaire",
+        difficulty: "Débutant",
         details: {
             context: "Projet scolaire IPIscine visant à concevoir et déployer de A à Z une infrastructure réseau sécurisée d'entreprise autour d'OPNsense.",
             objectives: [
@@ -62,7 +62,7 @@ export const projects = [
         technologies: ["Proxmox", "Ansible", "Automatisation"],
         section: "scolaire",
         category: "Cybersécurité",
-        difficulty: "Intermédiaire",
+        difficulty: "Débutant",
         details: {
             context: "Création d'un laboratoire virtuel d'entraînement à la cybersécurité (Lab CTF/Pentest) pour permettre l'exercice des étudiants dans un environnement isolé.",
             objectives: [
@@ -99,7 +99,7 @@ export const projects = [
         technologies: ["Ansible", "Linux", "Samba AD", "Nextcloud", "Prometheus", "Sécurité (Hardening)"],
         section: "scolaire",
         category: "Travail d'équipe",
-        difficulty: "Avancé",
+        difficulty: "Intermédiaire",
         details: {
             context: "Projet collaboratif de fin de 2ème année de Bachelor, réalisé au sein d'une équipe de 5 personnes. L'objectif global était la conception, le déploiement et la sécurisation d'une infrastructure de services complets (Annuaire, Collaboration, Supervision).",
             objectives: [
@@ -142,7 +142,7 @@ export const projects = [
         technologies: ["Proxmox", "OPNsense", "Docker", "Portainer", "Nginx Proxy Manager", "WireGuard", "VLANs", "AdGuard", "Uptime Kuma", "LXC"],
         section: "perso",
         category: "Infrastructure",
-        difficulty: "Intermédiaire",
+        difficulty: "Débutant",
         details: {
             context: "Projet personnel de conception d'une infrastructure complète pour expérimenter l'administration système, réseau et cybersécurité dans un environnement réaliste.",
             objectives: [
@@ -189,7 +189,7 @@ export const projects = [
         technologies: ["Kubernetes", "Talos Linux", "Helm", "ArgoCD", "GitOps", "Harbor", "Gitea", "Traefik", "Dashy", "CoreDNS"],
         section: "perso",
         category: "DevOps",
-        difficulty: "Avancé",
+        difficulty: "Intermédiaire",
         details: {
             context: "Modernisation totale du Homelab en migrant des conteneurs isolés vers une architecture Kubernetes hautement disponible gérée par approche GitOps.",
             objectives: [
@@ -235,7 +235,7 @@ export const projects = [
         technologies: ["OPNsense", "HAProxy", "Talos Linux", "Kubernetes", "Cilium", "Proxmox", "OpenShift", "GitLab CI", "Docker"],
         section: "perso",
         category: "Professionnel",
-        difficulty: "Expert",
+        difficulty: "Avancé",
         details: {
             context: "Synthèse exhaustive des missions d'ingénierie, de déploiement et de maintien en condition opérationnelle (MCO) menées au cours de mon stage. L'infrastructure globale repose sur des principes de haute disponibilité, de sécurité \"Zero Trust\" et d'Infrastructure as Code (IaC).",
             objectives: [
@@ -249,60 +249,44 @@ export const projects = [
             results: "Une infrastructure de production stable, documentée et sécurisée. Le projet a couvert tous les aspects du DevOps moderne, de la couche réseau jusqu'à l'orchestration complexe et la CI/CD.",
             extendedSections: [
                 {
-                    title: "1. Infrastructure Réseau, Sécurité & Routage Applicatif",
-                    subtitle: "Conception du socle réseau sécurisé permettant l'interconnexion et l'exposition des différents services.",
+                    title: "1. Réseau et Sécurité",
+                    subtitle: "Mise en place d'une base réseau sécurisée.",
                     items: [
-                        "Déploiement Pare-feu & Segmentation : Installation d'OPNsense. Gestion de VLANs (Management, DMZ, LAN, Cluster K8s) avec routage inter-VLAN strict.",
-                        "Configuration Reverse Proxy (HAProxy) : Point d'entrée unique (Front-end 443) pour exposer les services internes.",
-                        "Terminaison SSL & Chiffrement : Déchiffrement SSL centralisé. Configuration 'ssl verify none' sur backends spécifiques (Kubernetes Dashboard, Omni) pour les certificats auto-signés.",
-                        "Routage Dynamique (SNI) : Utilisation des ACLs SNI pour trier et rediriger vers GitLab ou Vaultwarden sans conflits de ports."
+                        "Segmentation : Création de réseaux virtuels (VLAN) isolés pour séparer les différents services.",
+                        "Pare-feu : Installation et configuration d'OPNsense pour filtrer et sécuriser le trafic.",
+                        "Proxys : Utilisation de HAProxy pour rediriger correctement les requêtes vers les serveurs internes."
                     ]
                 },
                 {
-                    title: "2. Architecture Kubernetes & OS Immuable (Talos Linux)",
-                    subtitle: "Déploiement d'un cluster Kubernetes de production \"Bare Metal\" sécurisé et optimisé.",
+                    title: "2. Déploiement de Kubernetes",
+                    subtitle: "Installation d'un cluster pour héberger des conteneurs.",
                     items: [
-                        "Déploiement de Cluster Talos : 6 nœuds (3 Control Planes, 3 Workers) basé sur l'OS immuable Talos Linux via talosctl/kubectl.",
-                        "Réseau Cloud Native (CNI) : Installation de Cilium (eBPF) en remplacement de kube-proxy pour optimiser routage et sécurité.",
-                        "Gestion PKI : Résolution d'incidents d'authentification TLS (CAs désynchronisés), gestion stricte du secrets.yaml.",
-                        "Configuration Hybride : Administration via Git Bash (Windows), résolution de conflits de syntaxe Shell pour les contextes KUBECONFIG."
+                        "Serveurs : Installation de 6 machines utilisant Talos Linux, un système d'exploitation allégé et sécurisé.",
+                        "Réseau des conteneurs : Mise en place de réseaux pour relier les différentes applications entre elles de manière sécurisée."
                     ]
                 },
                 {
-                    title: "3. Services K8s, Persistance & Load Balancing",
-                    subtitle: "Mise en production d'applications conteneurisées avec gestion complexe du stockage et réseau externe.",
+                    title: "3. Stockage et Déploiement",
+                    subtitle: "Gestion des données et lancement des services.",
                     items: [
-                        "Load Balancing Interne (MetalLB) : Mode Layer 2 pour attribution IP dynamique (services LoadBalancer), correction de syntaxes YAML.",
-                        "Déploiement de Services : Mise en production de Vaultwarden.",
-                        "Persistance sur OS Immuable : Stockage via hostPath pour contourner l'immuabilité de Talos.",
-                        "Gestion des Registres Helm : Migration vers registres OCI et manifests YAML bruts face à l'instabilité de certains dépôts."
+                        "Stockage local : Configuration d'un système pour conserver les données (afin de ne rien perdre au redémarrage des machines).",
+                        "Déploiement : Utilisation de fichiers de configuration simplifiés et standardisés pour lancer les applications (Vaultwarden, etc.)."
                     ]
                 },
                 {
-                    title: "4. Architecture Cloud Native, CI/CD & Identité",
-                    subtitle: "Automatisation des cycles de développement et intégration SSO.",
+                    title: "4. Automatisation et Gestion",
+                    subtitle: "Simplification des tâches de l'administrateur.",
                     items: [
-                        "Pipeline CI/CD : GitLab CI pour déploiement auto d'images Docker vers Portainer via Webhooks.",
-                        "Gestion des Bases de Données : Migrations SQL automatisées. Résolution d'états de verrouillage (Dirty database) via purge de volumes.",
-                        "SSO & Résolution DNS interne : Authentification OIDC (Authentik). Résolution de l'isolation DNS des conteneurs via extra_hosts."
+                        "Mises à jour : Mise en place de GitLab CI pour que les applications se mettent à jour automatiquement selon le code.",
+                        "Authentification (SSO) : Configuration d'un compte unique pour permettre aux utilisateurs de se connecter à tous les services d'un coup sans retaper leur mot de passe."
                     ]
                 },
                 {
-                    title: "5. Virtualisation & Orchestration Lourde (Proxmox & OpenShift)",
-                    subtitle: "Administration des hyperviseurs et déploiement d'architectures d'entreprise certifiées.",
+                    title: "5. Maintenance et Documentation",
+                    subtitle: "Prévention et résolution des problèmes.",
                     items: [
-                        "Déploiement OpenShift (SNO) : Installation via Assisted Installer. Enregistrements DNS stricts (Host Overrides sous pfSense/OPNsense).",
-                        "Déploiement d'une application propre à OpenShift : Moteur en Certified Containers. Local Storage Operator, clés d'entité, licences.",
-                        "Optimisation Proxmox : Diagnostic d'une fuite RAM impactant l'hyperviseur.",
-                        "Tuning Système (Kernel) : Saturation de mémoire Slab (indexation snapshots ZFS). Procédure de purge à chaud (drop_caches) et réglage vm.vfs_cache_pressure."
-                    ]
-                },
-                {
-                    title: "6. Outils, Veille & Documentation Opérationnelle",
-                    subtitle: "Capitalisation des connaissances et production de livrables professionnels.",
-                    items: [
-                        "Rédaction Technique : Utilisation d'Obsidian (Better Export PDF) pour génération automatisée de rapports.",
-                        "Procédures de Reprise (PRA) : Documentation de restauration de pare-feu (Disaster Recovery) et récupération d'accès administrateurs locaux via console Rails."
+                        "Optimisation de la mémoire : Diagnostic et ajustement des paramètres pour éviter que le serveur principal (Proxmox) ne sature et ralentisse.",
+                        "Documentation et Secours : Rédaction de guides simples pour pouvoir relancer toute l'infrastructure étape par étape en cas de panne globale."
                     ]
                 }
             ]
