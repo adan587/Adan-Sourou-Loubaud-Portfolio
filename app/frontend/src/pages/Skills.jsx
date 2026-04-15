@@ -61,10 +61,10 @@ const Skills = () => {
                     <Card className="p-4 bg-background/50 border-emerald-500/20 max-w-2xl text-sm text-muted-foreground w-full shadow-sm">
                         <h3 className="font-semibold text-foreground mb-2">Comprendre ma grille d'évaluation :</h3>
                         <ul className="space-y-1 grid grid-cols-1 md:grid-cols-2 gap-x-4">
-                            <li><strong className="text-emerald-500">0-40%</strong> : Notions basiques (concepts théoriques).</li>
-                            <li><strong className="text-cyan-500">40-60%</strong> : Pratique courante (laboratoire, maquettes expertes).</li>
-                            <li><strong className="text-violet-500">60-80%</strong> : Autonomie (administration, déploiements réels).</li>
-                            <li><strong className="text-rose-500">80-100%</strong> : Avancé / Pro (utilisation en entreprise).</li>
+                            <li><strong className="text-emerald-500">0-40%</strong> : Notions basiques (compréhension théorique).</li>
+                            <li><strong className="text-cyan-500">40-60%</strong> : Pratique guidée (laboratoire, configuration de base).</li>
+                            <li><strong className="text-violet-500">60-80%</strong> : Autonomie (déploiement et administration sans aide).</li>
+                            <li><strong className="text-rose-500">80-100%</strong> : Opérationnel (pleinement compris et mis en pratique).</li>
                         </ul>
                     </Card>
                 </div>
