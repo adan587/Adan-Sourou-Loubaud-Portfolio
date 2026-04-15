@@ -4,7 +4,7 @@ export const personalInfo = {
     name: "Adan Sourou-Loubaud",
     title: "Étudiant en Administration Systèmes et Réseaux",
     subtitle: "Bachelor 2ème année",
-    bio: "Passionné par les infrastructures IT et le DevOps, je suis à la recherche d'une alternance dans le domaine de l'administration réseaux ou du DevOps. Je développe mes compétences en administration système Linux/Windows, en conteneurisation et en approche GitOps.",
+    bio: "Intéressé par les infrastructures IT et le DevOps, je suis à la recherche d'une alternance dans le domaine de l'administration réseaux ou du DevOps. Je développe mes compétences en administration système Linux/Windows, en conteneurisation et en approche GitOps.",
     email: "asourou@icloud.com",
     phone: "06 28 95 75 07",
     location: "Toulouse, France",
@@ -23,6 +23,7 @@ export const projects = [
         technologies: ["OPNsense", "DHCP", "Firewall Rules", "OPNvpn", "LAN/WAN"],
         section: "scolaire",
         category: "Réseau",
+        difficulty: "Intermédiaire",
         details: {
             context: "Projet scolaire IPIscine visant à concevoir et déployer de A à Z une infrastructure réseau sécurisée d'entreprise autour d'OPNsense.",
             objectives: [
@@ -61,6 +62,7 @@ export const projects = [
         technologies: ["Proxmox", "Ansible", "Automatisation"],
         section: "scolaire",
         category: "Cybersécurité",
+        difficulty: "Intermédiaire",
         details: {
             context: "Création d'un laboratoire virtuel d'entraînement à la cybersécurité (Lab CTF/Pentest) pour permettre l'exercice des étudiants dans un environnement isolé.",
             objectives: [
@@ -97,6 +99,7 @@ export const projects = [
         technologies: ["Ansible", "Linux", "Samba AD", "Nextcloud", "Prometheus", "Sécurité (Hardening)"],
         section: "scolaire",
         category: "Travail d'équipe",
+        difficulty: "Avancé",
         details: {
             context: "Projet collaboratif de fin de 2ème année de Bachelor, réalisé au sein d'une équipe de 5 personnes. L'objectif global était la conception, le déploiement et la sécurisation d'une infrastructure de services complets (Annuaire, Collaboration, Supervision).",
             objectives: [
@@ -139,6 +142,7 @@ export const projects = [
         technologies: ["Proxmox", "OPNsense", "Docker", "Portainer", "Nginx Proxy Manager", "WireGuard", "VLANs", "AdGuard", "Uptime Kuma", "LXC"],
         section: "perso",
         category: "Infrastructure",
+        difficulty: "Intermédiaire",
         details: {
             context: "Projet personnel de conception d'une infrastructure complète pour expérimenter l'administration système, réseau et cybersécurité dans un environnement réaliste.",
             objectives: [
@@ -185,6 +189,7 @@ export const projects = [
         technologies: ["Kubernetes", "Talos Linux", "Helm", "ArgoCD", "GitOps", "Harbor", "Gitea", "Traefik", "Dashy", "CoreDNS"],
         section: "perso",
         category: "DevOps",
+        difficulty: "Avancé",
         details: {
             context: "Modernisation totale du Homelab en migrant des conteneurs isolés vers une architecture Kubernetes hautement disponible gérée par approche GitOps.",
             objectives: [
@@ -230,6 +235,7 @@ export const projects = [
         technologies: ["OPNsense", "HAProxy", "Talos Linux", "Kubernetes", "Cilium", "Proxmox", "OpenShift", "GitLab CI", "Docker"],
         section: "perso",
         category: "Professionnel",
+        difficulty: "Expert",
         details: {
             context: "Synthèse exhaustive des missions d'ingénierie, de déploiement et de maintien en condition opérationnelle (MCO) menées au cours de mon stage. L'infrastructure globale repose sur des principes de haute disponibilité, de sécurité \"Zero Trust\" et d'Infrastructure as Code (IaC).",
             objectives: [
@@ -312,12 +318,13 @@ export const experiencesIT = [
         location: "France",
         period: "2025",
         type: "Stage",
-        description: "Administration des systèmes et réseaux de l'entreprise, gestion de l'infrastructure IT.",
+        description: "Ingénierie, déploiement et maintien en condition opérationnelle d'une infrastructure cloud native.",
         tasks: [
-            "Administration des serveurs et de l'infrastructure réseau",
-            "Gestion et maintenance des systèmes",
-            "Support technique et résolution d'incidents",
-            "Documentation technique des procédures"
+            "Déploiement d'un cluster Kubernetes bare-metal (Talos Linux)",
+            "Administration réseau et sécurité (OPNsense, HAProxy, VLANs)",
+            "Automatisation CI/CD (GitLab CI) et intégration SSO",
+            "Administration des environnements virtuels (Proxmox, OpenShift)",
+            "Création de procédures PRA (Disaster Recovery)"
         ]
     }
 ];

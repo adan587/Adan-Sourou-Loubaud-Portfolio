@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Layers } from 'lucide-react';
 import { Card } from '../components/ui/card';
@@ -8,6 +8,11 @@ import { projects } from '../data/mock';
 
 const ProjectDetail = () => {
     const { slug } = useParams();
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const project = projects.find(p => p.slug === slug);
 
     if (!project) {

@@ -22,7 +22,7 @@ const About = () => {
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <Card className="md:col-span-1 p-8 text-center  transition-shadow">
                         <div className="w-32 h-32 rounded-full mx-auto mb-6 border-4 dark:border-emerald-500/20 shadow-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
-                            <span className="text-4xl font-bold text-white">AS</span>
+                            <span className="text-2xl font-bold text-white">Adan</span>
                         </div>
                         <h2 className="text-2xl font-bold mb-2">{personalInfo.name}</h2>
                         <p className="text-muted-foreground mb-4">{personalInfo.title}</p>
@@ -38,9 +38,9 @@ const About = () => {
                         </h3>
                         <div className="space-y-4 text-muted-foreground leading-relaxed">
                             <p>
-                                Passionné par les technologies de l'information, j'ai toujours été
-                                fasciné par le fonctionnement des réseaux et des systèmes informatiques.
-                                Cette passion m'a naturellement conduit à poursuivre des études en
+                                Attiré par les technologies de l'information, j'ai toujours été
+                                intéressé par le fonctionnement des réseaux et des systèmes informatiques.
+                                Cet intérêt m'a naturellement conduit à poursuivre des études en
                                 administration systèmes et réseaux à l'IPI.
                             </p>
                             <p>
@@ -141,7 +141,7 @@ const About = () => {
                                 'Docker',
                                 'Terraform',
                                 'DevOps',
-                                'Technologies Open Source'
+                                'OpenShift'
                             ].map((interest, index) => (
                                 <Badge
                                     key={index}

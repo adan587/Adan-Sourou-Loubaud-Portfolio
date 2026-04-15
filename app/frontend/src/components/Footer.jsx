@@ -16,7 +16,7 @@ const Footer = () => {
                             {personalInfo.title}
                         </p>
                         <p className="text-xs text-muted-foreground">
-                            Passionné par l'infrastructure IT et les technologies réseau.
+                            Intéressé par l'infrastructure IT et les technologies réseau.
                         </p>
                     </div>
 

@@ -7,6 +7,16 @@ import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { projects } from '../data/mock';
 
+const getDifficultyColor = (difficulty) => {
+    switch(difficulty) {
+        case 'Débutant': return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
+        case 'Intermédiaire': return 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20';
+        case 'Avancé': return 'bg-orange-500/10 text-orange-500 border-orange-500/20';
+        case 'Expert': return 'bg-red-500/10 text-red-500 border-red-500/20';
+        default: return 'bg-slate-500/10 text-slate-500 border-slate-500/20';
+    }
+};
+
 const ProjectCard = ({ project, index }) => (
     <Card
         key={project.id}
@@ -20,6 +30,11 @@ const ProjectCard = ({ project, index }) => (
                 <Badge className="bg-emerald-500/10 text-emerald-500">
                     {project.category}
                 </Badge>
+                {project.difficulty && (
+                    <Badge variant="outline" className={`text-xs ml-2 ${getDifficultyColor(project.difficulty)}`}>
+                        {project.difficulty}
+                    </Badge>
+                )}
             </div>
 
             <div>
