@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/mock';
 
@@ -25,24 +26,24 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold">Liens rapides</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
-                                <a href="/" className="hover:text-emerald-500 transition-colors">
+                                <Link to="/" className="hover:text-emerald-500 transition-colors">
                                     Accueil
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/projects" className="hover:text-emerald-500 transition-colors">
+                                <Link to="/projects" className="hover:text-emerald-500 transition-colors">
                                     Projets
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/experience" className="hover:text-emerald-500 transition-colors">
+                                <Link to="/experience" className="hover:text-emerald-500 transition-colors">
                                     Expérience
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/contact" className="hover:text-emerald-500 transition-colors">
+                                <Link to="/contact" className="hover:text-emerald-500 transition-colors">
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

@@ -3,6 +3,7 @@ import { Briefcase, Calendar, MapPin, Monitor, ShoppingCart } from 'lucide-react
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
+import { Link } from 'react-router-dom';
 import { experiencesIT, experiencesOther } from '../data/mock';
 
 const ExperienceCard = ({ exp, index }) => (
@@ -120,11 +121,11 @@ const Experience = () => {
                         <p className="text-muted-foreground mb-6">
                             Je suis actuellement à la recherche d'une alternance en administration réseaux ou DevOps pour continuer à développer mes compétences.
                         </p>
-                        <a href="/contact">
+                        <Link to="/contact">
                             <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white shadow-lg hover:scale-105 transition-all">
                                 Me contacter
                             </Button>
-                        </a>
+                        </Link>
                     </Card>
                 </div>
             </div>
